@@ -1,2 +1,2 @@
-# homebrew-structurizr-site
+# homebrew-tap
 
