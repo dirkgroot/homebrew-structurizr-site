@@ -1,19 +1,22 @@
 class StructurizrSite < Formula
   desc "Static-site generator for C4 architecture models from Structurizr DSL"
   homepage "https://github.com/dirkgroot/structurizr-site"
-  version "0.0.1-pre-alpha1"
+  version "0.0.1-pre-alpha2"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/dirkgroot/structurizr-site/releases/download/v#{version}/structurizr-site-aarch64-apple-darwin.tar.gz"
-      sha256 "5bb03e17fc7ff874360f196e67756d7a472848dd9c97b6fa4db5a5477605977b"
+      sha256 "b0d35beada18404c511f6884b074896296a999ca70e67aeecbf134c5fa035a75"
+    else
+      url "https://github.com/dirkgroot/structurizr-site/releases/download/v#{version}/structurizr-site-x86_64-apple-darwin.tar.gz"
+      sha256 "8e3acf80c1319f8083b7beb28dccd9d939a57e02ae712aa13eb6b3ee319c6fb0"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/dirkgroot/structurizr-site/releases/download/v#{version}/structurizr-site-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "16805a0bff487de06c729ee560cab58c28b7f8f3be8d2ccf47cc6fcf36f1b3a7"
+      sha256 "5bdc71fa4db4ba7d08227395012de89431f2beeacdac11c7a5efc3a881855cbc"
     end
   end
 
